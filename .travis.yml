@@ -1,0 +1,14 @@
+language: java
+
+addons:
+  chrome: stable
+
+install:
+  - export latest=$(curl -s https://chromedriver.storage.googleapis.com/LATEST_RELEASE)
+  - curl -s https://chromedriver.storage.googleapis.com/${latest}/chromedriver_linux64.zip -O
+  - unzip -q -o chromedriver_linux64.zip
+  - chmod +x chromedriver
+
+
+script:
+  - mvn -Dtest=LoginTests test -Dwebdriver.chrome.driver=$(pwd)/chromedriver -Dbrowser="headless"
