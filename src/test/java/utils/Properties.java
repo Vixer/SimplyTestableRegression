@@ -14,8 +14,8 @@ public class Properties {
     }
 
     public static WebDriver getBROWSER() {
-//        System.getProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
-//        System.getProperty("webdriver.gecko.driver", "src/test/resources/drivers/geckodriver.exe");
+        System.getProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
+        System.getProperty("webdriver.gecko.driver", "src/test/resources/drivers/geckodriver.exe");
         WebDriver driver;
 
         if (BROWSER.equals("chrome")) {
