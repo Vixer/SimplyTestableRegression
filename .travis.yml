@@ -3,11 +3,17 @@ language: java
 addons:
   chrome: stable
 
+env:
+  global:
+    - DRIVER=selenium_chrome
+    - CHROME_BIN=/usr/bin/google-chrome
+    - USE_COVERALLS=TRUE
+
 install:
   #- wget http://chromedriver.storage.googleapis.com/2.24/chromedriver_linux64.zip
   #- unzip chromedriver_linux64.zip -d /home/travis/virtualenv/python2.7.12/bin/
   #- export CHROME_BIN=chromium-browser
-  - chromedriver-update
+  #- chromedriver-update
 
   - #install things from pom
 
