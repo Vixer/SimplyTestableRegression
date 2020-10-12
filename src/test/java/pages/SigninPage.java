@@ -6,9 +6,18 @@ import pages.locators.SigninLocators;
 public class SigninPage {
     WebDriver driver;
     SigninLocators locators = new SigninLocators();
+    private String expectedPageTitle = "Sign In";
 
     public SigninPage(WebDriver driver){
         this.driver = driver;
+    }
+
+    public String getPageTitle(){
+        return driver.getTitle();
+    }
+
+    public Boolean compareExpectedToActualPageTitle(){
+        return getPageTitle().equals(expectedPageTitle);
     }
 
     public void submitSigninInfo(String email, String password){
