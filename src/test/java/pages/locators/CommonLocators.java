@@ -7,7 +7,7 @@ public class CommonLocators {
     private By signOutButtonLocator = By.xpath("//button[contains(text(),'Sign out')]");
 
     public By getSigninLinkLocator(){
-        return signOutButtonLocator;
+        return signinLinkLocator;
     }
 
     public By getSignOutButtonLocator() {
