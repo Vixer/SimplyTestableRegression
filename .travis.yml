@@ -1,0 +1,11 @@
+language: java
+
+addons:
+  chrome: stable
+
+install:
+  - # install/update chrome driver?
+  - #install things from pom
+
+script:
+  - mvn -Dtest=LoginTests test -Dbrowser="headless"
