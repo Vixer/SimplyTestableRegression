@@ -8,7 +8,7 @@ install:
   - curl -s https://chromedriver.storage.googleapis.com/86.0.4240.22/chromedriver_linux64.zip -O
   - unzip -q -o chromedriver_linux64.zip
   - ls -la | grep chromedriver
-  - which chromedriver
+  #- which chromedriver
   - ls $(pwd)/chromedriver
   #- wget https://chromedriver.storage.googleapis.com/86.0.4240.22/chromedriver_linux64.zip
   #- unzip chromedriver_linux64.zip
