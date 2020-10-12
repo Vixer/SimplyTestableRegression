@@ -4,8 +4,8 @@ addons:
   chrome: stable
 
 install:
-  - export latest=$(curl -s https://chromedriver.storage.googleapis.com/LATEST_RELEASE)
-  - curl -s https://chromedriver.storage.googleapis.com/${latest}/chromedriver_linux64.zip -O
+  #- export latest=$(curl -s https://chromedriver.storage.googleapis.com/LATEST_RELEASE)
+  - curl -s https://chromedriver.storage.googleapis.com/86.0.4240.22/chromedriver_linux64.zip -O
   - unzip -q -o chromedriver_linux64.zip
   - which chromedriver_linux64
   #- wget http://chromedriver.storage.googleapis.com/2.24/chromedriver_linux64.zip
@@ -16,4 +16,4 @@ install:
   - #install things from pom
 
 script:
-  - mvn -Dtest=LoginTests test -Dwebdriver.chrome.driver=$(which chromedriver_linux64) -Dbrowser="headless" 
+  - mvn -Dtest=LoginTests test -Dwebdriver.chrome.driver=$(which chromedriver_linux64) -Dbrowser="headless"
