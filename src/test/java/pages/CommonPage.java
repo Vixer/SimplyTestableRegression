@@ -19,9 +19,7 @@ public class CommonPage {
         DelayedElementFinder.findElement(driver, locators.getSignOutButtonLocator()).click();
     }
 
-    public Boolean checkLogOutButtonShown(){
-       return (DelayedElementFinder.findElements(driver, locators.getSignOutButtonLocator()).size() != 0);
+    public Boolean checkLogOutButtonShown() {
+        return (DelayedElementFinder.findElements(driver, locators.getSignOutButtonLocator()).size() != 0);
     }
-
-
 }
