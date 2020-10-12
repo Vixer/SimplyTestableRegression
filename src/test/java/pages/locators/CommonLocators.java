@@ -13,4 +13,5 @@ public class CommonLocators {
     public By getSignOutButtonLocator() {
         return signOutButtonLocator;
     }
+
 }
