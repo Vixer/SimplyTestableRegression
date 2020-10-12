@@ -27,4 +27,15 @@ public class SigninPage {
         DelayedElementFinder.findElement(driver, locators.getSubmitButtonLocator()).click();
     }
 
+    public Boolean isResetPasswordButtonShown(){
+        return DelayedElementFinder.findElements(driver,locators
+                .getFailedLoginResetPasswordButtonLocator())
+                .size() != 0;
+    }
+
+    public Boolean isSignUpButtonShown(){
+        return DelayedElementFinder.findElements(driver,locators.getSignUpButtonLocator())
+                .size() != 0;
+    }
+
 }
