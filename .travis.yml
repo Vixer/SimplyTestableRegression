@@ -22,4 +22,4 @@ install:
   - #install things from pom
 
 script:
-  - mvn -Dtest=LoginTests test -Dwebdriver.chrome.driver=/home/travis/build/Vixer/SimplyTestableRegression/chromedriver -Dbrowser="headless"
+  - mvn -Dtest=LoginTests test -Dwebdriver.chrome.driver=$(pwd)/chromedriver -Dbrowser="headless"
