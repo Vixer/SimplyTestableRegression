@@ -1,6 +1,7 @@
 package pages;
 import org.openqa.selenium.WebDriver;
 import pages.locators.CommonLocators;
+import utils.DelayedElementFinder;
 
 public class CommonPage {
     WebDriver driver;
@@ -11,15 +12,15 @@ public class CommonPage {
     }
 
     public void clickSigninLink(){
-        driver.findElement(locators.getSigninLinkLocator()).click();
+        DelayedElementFinder.findElement(driver, locators.getSigninLinkLocator()).click();
     }
 
     public void clickSignOutButton(){
-        driver.findElement(locators.getSignOutButtonLocator()).click();
+        DelayedElementFinder.findElement(driver, locators.getSignOutButtonLocator()).click();
     }
 
     public Boolean checkLogOutButtonShown(){
-       return (driver.findElements(locators.getSignOutButtonLocator()).size() != 0);
+       return (DelayedElementFinder.findElements(driver, locators.getSignOutButtonLocator()).size() != 0);
     }
 
 
