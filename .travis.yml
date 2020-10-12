@@ -8,18 +8,7 @@ install:
   - curl -s https://chromedriver.storage.googleapis.com/${latest}/chromedriver_linux64.zip -O
   - unzip -q -o chromedriver_linux64.zip
   - chmod +x chromedriver
-#  - mv chromedriver ~/bin
-#  - ls -la | grep chromedriver
-  #- which chromedriver
-  - ls $(pwd)/chromedriver
-  #- wget https://chromedriver.storage.googleapis.com/86.0.4240.22/chromedriver_linux64.zip
-  #- unzip chromedriver_linux64.zip
-  #- unzip -q -o chromedriver_linux64.zip
-  #- which chromedriver_linux64
-  #- export CHROME_BIN=chromium-browser
-  #- chromedriver-update
 
-  - #install things from pom
 
 script:
   - mvn -Dtest=LoginTests test -Dwebdriver.chrome.driver=$(pwd)/chromedriver -Dbrowser="headless"
