@@ -1,5 +1,4 @@
 package pages;
-
 import org.openqa.selenium.WebDriver;
 import pages.locators.CommonLocators;
 
@@ -13,6 +12,14 @@ public class CommonPage {
 
     public void clickSigninLink(){
         driver.findElement(locators.getSigninLinkLocator()).click();
+    }
+
+    public void clickSignOutButton(){
+        driver.findElement(locators.getSignOutButtonLocator()).click();
+    }
+
+    public Boolean checkLogOutButtonShown(){
+       return (driver.findElements(locators.getSignOutButtonLocator()).size() != 0);
     }
 
 
