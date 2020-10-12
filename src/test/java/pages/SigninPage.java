@@ -23,8 +23,8 @@ public class SigninPage {
 
     public void submitSigninInfo(String email, String password){
         DelayedElementFinder.findElement(driver, locators.getEmailFieldLocator()).sendKeys(email);
-        driver.findElement(locators.getPasswordFieldLocator()).sendKeys(password);
-        driver.findElement(locators.getSubmitButtonLocator()).click();
+        DelayedElementFinder.findElement(driver, locators.getPasswordFieldLocator()).sendKeys(password);
+        DelayedElementFinder.findElement(driver, locators.getSubmitButtonLocator()).click();
     }
 
 }
