@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 import pages.locators.SigninLocators;
+import utils.DelayedElementFinder;
 
 public class SigninPage {
     WebDriver driver;
@@ -21,7 +22,7 @@ public class SigninPage {
     }
 
     public void submitSigninInfo(String email, String password){
-        driver.findElement(locators.getEmailFieldLocator()).sendKeys(email);
+        DelayedElementFinder.findElement(driver, locators.getEmailFieldLocator()).sendKeys(email);
         driver.findElement(locators.getPasswordFieldLocator()).sendKeys(password);
         driver.findElement(locators.getSubmitButtonLocator()).click();
     }
