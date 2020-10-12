@@ -1,5 +1,6 @@
 package pages;
 
+import models.User;
 import org.openqa.selenium.WebDriver;
 import pages.locators.SigninLocators;
 import utils.DelayedElementFinder;
@@ -21,10 +22,13 @@ public class SigninPage {
         return getPageTitle().contains(expectedPageTitle);
     }
 
-    public void submitSigninInfo(String email, String password){
-        DelayedElementFinder.findElement(driver, locators.getEmailFieldLocator()).sendKeys(email);
-        DelayedElementFinder.findElement(driver, locators.getPasswordFieldLocator()).sendKeys(password);
-        DelayedElementFinder.findElement(driver, locators.getSubmitButtonLocator()).click();
+    public void submitSigninInfo(User userId){
+        DelayedElementFinder.findElement(driver, locators.getEmailFieldLocator())
+                .sendKeys(userId.getEmailAddress());
+        DelayedElementFinder.findElement(driver, locators.getPasswordFieldLocator())
+                .sendKeys(userId.getPassword());
+        DelayedElementFinder.findElement(driver, locators.getSubmitButtonLocator())
+                .click();
     }
 
     public Boolean isResetPasswordButtonShown(){
