@@ -15,4 +15,8 @@ public class UserProvider {
         this.users.put("validUser3",new User("user3","pass"));
 
     }
+
+    public User getUser(String userId){
+        return (User) users.get(userId);
+    }
 }

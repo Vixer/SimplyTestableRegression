@@ -6,10 +6,12 @@ import org.testng.annotations.BeforeClass;
 import pages.CommonPage;
 import pages.HomePage;
 import pages.SigninPage;
+import services.UserProvider;
 import utils.Properties;
 
 public abstract class AbstractBaseTest {
     WebDriver driver;
+    UserProvider userProvider = new UserProvider();
     HomePage homePage;
     CommonPage commonPage;
     SigninPage signinPage;
